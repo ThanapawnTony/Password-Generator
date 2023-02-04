@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: dodgerblue;
+}
+
+.container {
+    width: 450px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.container h2 {
+    font-weight: 600;
+    font-size: 1.31rem;
+    padding: 1rem 1.175rem;
+    border-bottom: 1px solid #d4bde5;
+}
+
+.wrapper {
+    margin: 1.25rem 1.75rem;
+}
+
+.wrapper .input-box {
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 53px;
+    font-size: 1.06rem;
+    font-weight: 500;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 0 2.86rem 0 1.01rem;
+    color: #000;
+    background: none;
+}
+
+.input-box span {
+    position: absolute;
+    right: 12px;
+    line-height: 52px;
+    color: #707070;
+}
+
+.wrapper .pass-indicator {
+    width: 100%;
+    background: #dfdfdf;
+    height: 3.85px;
+    margin-top: 0.75rem;
+    border-radius: 25px;
+    position: relative;
+}
+
+.pass-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background: #f1c80b;
+    border-radius: inherit;
+}
+
+.wrapper .password-length {
+    margin: 1.56rem 0 1.25rem;
+}
+
+.password-length .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-length input {
+    width: 100%;
+    height: 5.25px;
+}
+
+.pass-settings .options {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.pass-settings .options .option {
+    display: flex;
+    width: calc(100% / 2);
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.options .option label {
+    cursor: pointer;
+    padding-left: 0.65rem;
+}
+
+.options .option {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.wrapper .generate-btn {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    margin: 0.93rem 0 1.3rem;
+    background: lightsteelblue;
+    border: none;
+    cursor: pointer;
+}
+
+.generate-btn:hover {
+    background: lightskyblue;
+    transition: 0.5s ease;
+    text-transform: uppercase;
+}
