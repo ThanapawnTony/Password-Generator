@@ -34,7 +34,7 @@ const generatePassword = () => {
         let randomChar = staticPassword[Math.floor(Math.random() * staticPassword.length)];
         if (excludeDuplicate) {
             // if randompassword does not contain the random char or randomchar is equal to spaces " " then add random char to randompassword else decremet i by -1 or i--
-            randomPassword.contains(randomChar) || randomChar == " " ? randomPassword += randomChar : i--;
+            !randomPassword.includes(randomChar) || randomChar == " " ? randomPassword += randomChar : i--;
         } else { // else add random character to random password
             randomPassword += randomChar;
         }
