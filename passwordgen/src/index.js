@@ -2,6 +2,7 @@ const lengthSlider = document.querySelector(".password-length input");
 const copyIcon = document.querySelector(".input-box span");
 generateBtn = document.querySelector(".generate-btn");
 options = document.querySelectorAll(".option input");
+passwordInput = document.querySelector(".input-box input");
 
 const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
@@ -39,7 +40,7 @@ const generatePassword = () => {
             randomPassword += randomChar;
         }
     }
-    console.log(randomPassword)
+    passwordInput.value = randomPassword; //pass randompassword to passwordinput
 }
 
 const updateSlider = () => {
