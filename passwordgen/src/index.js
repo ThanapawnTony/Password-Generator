@@ -58,8 +58,11 @@ const updateSlider = () => {
 updateSlider();
 
 const copyPassword = () => {
-    navigator.clipboard.writeText(value);
+    navigator.clipboard.writeText(passwordInput.value);
     copyIcon.innerText = "check";
+    setTimeout(() => {
+        copyIcon.innerText = "copy_all";
+    }, 1000);
 }
 
 copyIcon.addEventListener("click", copyPassword);
