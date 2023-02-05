@@ -49,6 +49,7 @@ body {
     padding: 0 2.86rem 0 1.01rem;
     color: #000;
     background: none;
+    letter-spacing: 0.75px;
 }
 
 .input-box span {
@@ -72,9 +73,32 @@ body {
     position: absolute;
     content: "";
     height: 100%;
+    border-radius: inherit;
+}
+
+.pass-indicator#useless::before {
+    background: #000;
+    width: 10%;
+}
+
+.pass-indicator#weak::before {
+    background: red;
+    width: 25%;
+}
+
+.pass-indicator#medium::before {
     width: 50%;
     background: #f1c80b;
-    border-radius: inherit;
+}
+
+.pass-indicator#good::before {
+    background: yellowgreen;
+    width: 75%;
+}
+
+.pass-indicator#strong::before {
+    background: rgb(10, 248, 10);
+    width: 100%;
 }
 
 .wrapper .password-length {

@@ -3,6 +3,7 @@ const copyIcon = document.querySelector(".input-box span");
 generateBtn = document.querySelector(".generate-btn");
 options = document.querySelectorAll(".option input");
 passwordInput = document.querySelector(".input-box input");
+passIndicator = document.querySelector(".pass-indicator");
 
 const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
@@ -43,9 +44,16 @@ const generatePassword = () => {
     passwordInput.value = randomPassword; //pass randompassword to passwordinput
 }
 
+const updatePassIndicator = () => {
+    // if length of pass less then 8 display weak and else display medium or strong
+    passIndicator.id = lengthSlider.value <= 5 ? "useless" : lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : lengthSlider.value <= 20 ? "good" : "strong";
+}
+
 const updateSlider = () => {
     // pass slider value to span text
     document.querySelector(".password-length span").innerText = lengthSlider.value;
+    generatePassword();
+    updatePassIndicator();
 }
 updateSlider();
 
